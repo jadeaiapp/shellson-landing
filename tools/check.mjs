@@ -98,6 +98,24 @@ function parseRGB(value) {
   return m ? [Number(m[1]), Number(m[2]), Number(m[3])] : null;
 }
 
+/**
+ * Sayfaya git. Canlı adrese karşı çalışırken geçici ağ hataları
+ * (ERR_NETWORK_CHANGED, timeout) olabiliyor; birkaç kez denenir.
+ */
+async function goto(page, url) {
+  let lastError;
+  for (let attempt = 1; attempt <= 4; attempt++) {
+    try {
+      await page.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
+      return;
+    } catch (error) {
+      lastError = error;
+      await new Promise((r) => setTimeout(r, attempt * 2500));
+    }
+  }
+  throw lastError;
+}
+
 // ---------------------------------------------------------------------------
 
 const { server, port } = await startServer();
@@ -112,7 +130,9 @@ const browser = await chromium.launch();
 section('1. Demo modu güvenliği');
 // =========================================================================
 {
-  const html = await fs.readFile(path.join(DIST, 'index.html'), 'utf8');
+  // Statik kontroller HTTP üzerinden yapılır; böylece aynı paket hem yerel
+  // build'e hem de canlı GitHub Pages adresine karşı çalıştırılabilir.
+  const html = await (await fetch(base)).text();
   const robots = /<meta name="robots" content="([^"]+)"/.exec(html)?.[1] ?? '';
   for (const directive of ['noindex', 'nofollow', 'noarchive', 'nosnippet', 'noimageindex']) {
     check(`robots meta: ${directive}`, robots.includes(directive), robots);
@@ -121,8 +141,13 @@ section('1. Demo modu güvenliği');
   check('Sayfa başlığı konsept olduğunu söylüyor', /<title>[^<]*[Kk]onsept/.test(html));
   check('og:title konsept olduğunu söylüyor', /og:title" content="[^"]*[Kk]onsept/.test(html));
 
-  const robotsTxt = await fs.readFile(path.join(DIST, 'robots.txt'), 'utf8');
-  check('robots.txt indekslemeyi kapatıyor', /User-agent:\s*\*/i.test(robotsTxt) && /Disallow:\s*\//.test(robotsTxt));
+  const robotsResponse = await fetch(new URL('robots.txt', base));
+  const robotsTxt = await robotsResponse.text();
+  check(
+    'robots.txt indekslemeyi kapatıyor',
+    robotsResponse.ok && /User-agent:\s*\*/i.test(robotsTxt) && /Disallow:\s*\//.test(robotsTxt),
+    `HTTP ${robotsResponse.status}`
+  );
 }
 
 // =========================================================================
@@ -135,7 +160,7 @@ for (const width of WIDTHS) {
   page.on('console', (msg) => msg.type() === 'error' && errors.push(msg.text()));
   page.on('pageerror', (err) => errors.push(String(err)));
 
-  await page.goto(base, { waitUntil: 'networkidle' });
+  await goto(page, base);
 
   const overflow = await page.evaluate(() => {
     const doc = document.documentElement;
@@ -161,7 +186,7 @@ section('3. Mobilde ana CTA kaydırmadan görünüyor mu?');
 for (const width of [360, 390, 430]) {
   const context = await browser.newContext({ viewport: { width, height: 640 } });
   const page = await context.newPage();
-  await page.goto(base, { waitUntil: 'networkidle' });
+  await goto(page, base);
 
   const visible = await page.evaluate(() => {
     const cta = document.querySelector('.hero__actions .btn--primary');
@@ -184,7 +209,7 @@ section('4. Dokunma hedefleri (min 44px)');
 {
   const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
   const page = await context.newPage();
-  await page.goto(base, { waitUntil: 'networkidle' });
+  await goto(page, base);
   await page.evaluate(() => document.querySelectorAll('details').forEach((d) => (d.open = true)));
 
   const small = await page.evaluate(() => {
@@ -214,7 +239,7 @@ section('5. Yol seçimi ve hizmet → form aktarımı');
 {
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
   const page = await context.newPage();
-  await page.goto(base, { waitUntil: 'networkidle' });
+  await goto(page, base);
 
   await page.click('.pathcard--arac');
   check('Araç yolu seçilince body[data-path]=arac', (await page.getAttribute('body', 'data-path')) === 'arac');
@@ -249,7 +274,7 @@ section('6. WhatsApp mesajları ve numara');
 {
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
   const page = await context.newPage();
-  await page.goto(base, { waitUntil: 'networkidle' });
+  await goto(page, base);
   await page.evaluate(() => {
     window.__opened = [];
     window.open = (url) => {
@@ -326,7 +351,7 @@ section('7. Galeri, lightbox ve klavye');
 {
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
   const page = await context.newPage();
-  await page.goto(base, { waitUntil: 'networkidle' });
+  await goto(page, base);
 
   const all = await page.locator('.gallery__grid .shot').count();
   await page.click('.gallery__filters [data-filter="bina"]');
@@ -372,7 +397,7 @@ section('8. Bağlantılar: ölü domain yok, doğru numaralar');
 {
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
   const page = await context.newPage();
-  await page.goto(base, { waitUntil: 'networkidle' });
+  await goto(page, base);
 
   const links = await page.evaluate(() =>
     [...document.querySelectorAll('a[href], iframe[src]')].map((el) => el.getAttribute('href') ?? el.getAttribute('src'))
@@ -413,7 +438,7 @@ section('9. Hareket azaltma (prefers-reduced-motion)');
     reducedMotion: 'reduce',
   });
   const page = await context.newPage();
-  await page.goto(base, { waitUntil: 'networkidle' });
+  await goto(page, base);
 
   const hidden = await page.evaluate(() =>
     [...document.querySelectorAll('[data-reveal]')].filter(
@@ -437,7 +462,7 @@ section('10. Kontrast (WCAG AA)');
 {
   const context = await browser.newContext({ viewport: { width: 1280, height: 900 } });
   const page = await context.newPage();
-  await page.goto(base, { waitUntil: 'networkidle' });
+  await goto(page, base);
 
   const samples = await page.evaluate(() => {
     const targets = [
@@ -522,7 +547,7 @@ section('11. Ekran görüntüleri');
   for (const shot of shots) {
     const context = await browser.newContext({ viewport: { width: shot.width, height: shot.height } });
     const page = await context.newPage();
-    await page.goto(base, { waitUntil: 'networkidle' });
+    await goto(page, base);
     await page.waitForTimeout(1400); // hero ipucu animasyonu otursun
 
     await page.screenshot({ path: path.join(SHOTS, `${shot.name}-hero.png`) });
