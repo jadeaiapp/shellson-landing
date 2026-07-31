@@ -1,0 +1,111 @@
+/*
+  Shellson — tasarım token'ları
+
+  Renk ekseni bilinçli bir yerden geliyor: float cam kenardan bakıldığında
+  yeşildir. Bu yüzden koyu tonlar nötr antrasit değil, yeşil-siyahtır ve
+  markanın birincil rengi de bir yeşildir. Kategoride yaygın olan
+  kırmızı/mavi/siyah kurgusundan ve antrasit+amber formülünden bilinçli
+  olarak uzak durulmuştur.
+
+  "Spektrum" ise filmin kenarındaki kırılmayı temsil eder ve YALNIZCA
+  2px'lik kenar çizgilerinde kullanılır — dolgu olarak asla.
+*/
+
+:root {
+  /* --- Koyu eksen: cam kenarı yeşili --- */
+  --ink-950: #041714;
+  --ink-900: #06201b;
+  --ink-800: #0a2c25;
+  --ink-700: #0f3a31;
+  --ink-600: #174c41;
+
+  /* --- Marka yeşili --- */
+  --jade-700: #0b5647;
+  --jade-600: #0f6b58; /* birincil eylem rengi — beyaz üzerinde 6,4:1 */
+  --jade-500: #178a70;
+  --jade-200: #b9dcd1;
+  --jade-100: #dcede6;
+  --jade-050: #eef6f2;
+
+  /* --- Açık eksen --- */
+  --paper: #f1f3ef;
+  --paper-sunk: #e8ece5;
+  --pane: #ffffff;
+  --sand: #f8f2e9; /* mimari bölümlerin ılık yüzeyi — çok düşük doygunluk */
+
+  --line: #dce2d9;
+  --line-strong: #c5cfc2;
+  --muted: #54655e; /* paper üzerinde 5,5:1 */
+  /* İkincil metin de AA eşiğini geçmeli: beyaz üzerinde 5,9:1,
+     tonelab'ın çökük zemininde 4,9:1 */
+  --muted-soft: #5a6860;
+
+  /* --- Spektrum: film kenarındaki kırılma --- */
+  --spectrum: linear-gradient(90deg, #4fd1e3 0%, #6c5ce7 48%, #e8619d 100%);
+  --spectrum-v: linear-gradient(180deg, #4fd1e3 0%, #6c5ce7 48%, #e8619d 100%);
+
+  /* --- Yollara ait yüzey sıcaklığı --- */
+  --arac-surface: var(--ink-900);
+  --arac-on: #e6efe9;
+  --bina-surface: var(--sand);
+  --bina-on: var(--ink-900);
+
+  /* --- Tipografi --- */
+  --font-display: 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Karla', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+
+  --t-display: clamp(2.35rem, 1.35rem + 4.3vw, 4.9rem);
+  --t-h2: clamp(1.7rem, 1.2rem + 2.1vw, 2.85rem);
+  --t-h3: clamp(1.12rem, 1.02rem + 0.45vw, 1.38rem);
+  --t-lede: clamp(1.02rem, 0.97rem + 0.28vw, 1.18rem);
+  --t-body: 1rem;
+  --t-sm: 0.9rem;
+  --t-xs: 0.78rem;
+
+  /* --- Aralık --- */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+  --s-9: 6rem;
+  --s-10: 8rem;
+
+  --section-y: clamp(3.5rem, 2rem + 6vw, 7rem);
+  --gutter: clamp(1.15rem, 0.6rem + 2.4vw, 3rem);
+  --measure: 68ch;
+  --max-w: 78rem;
+
+  /* --- Köşe --- */
+  --r-xs: 4px;
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+
+  /* --- Gölge: yeşile çalan, düşük yoğunluklu --- */
+  --shadow-1: 0 1px 2px rgb(6 32 27 / 6%), 0 2px 8px rgb(6 32 27 / 4%);
+  --shadow-2: 0 2px 6px rgb(6 32 27 / 7%), 0 14px 34px rgb(6 32 27 / 8%);
+  --shadow-3: 0 30px 70px rgb(6 32 27 / 18%);
+
+  /* --- Hareket --- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-1: 160ms;
+  --dur-2: 280ms;
+  --dur-3: 460ms;
+  --dur-4: 900ms;
+
+  /* Sabit üst çubukların toplam yüksekliği — kaydırma hedefleri bunu kullanır */
+  --chrome-h: 82px;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --chrome-h: 94px;
+  }
+}

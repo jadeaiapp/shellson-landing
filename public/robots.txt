@@ -1,0 +1,8 @@
+# Bu site Shellson için hazırlanmış bağımsız bir KONSEPT çalışmadır.
+# Shellson'ın resmî web sitesi değildir ve indekslenmemelidir.
+#
+# Resmî yayına geçilirse bu dosya "Allow: /" ile değiştirilmeli,
+# index.html içindeki robots meta etiketi de güncellenmelidir.
+
+User-agent: *
+Disallow: /

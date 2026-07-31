@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- DEMO MODU: Bu sayfa Shellson'ın resmî sitesi değildir; arama motorlarına kapalıdır. -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+
+    <title>Konsept çalışma — Shellson · Araç ve bina cam filmi, Kağıthane</title>
+    <meta
+      name="description"
+      content="Shellson için hazırlanmış bağımsız konsept landing page. Resmî web sitesi değildir."
+    />
+    <meta name="theme-color" content="#06201B" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Konsept çalışma — Shellson · Araç ve bina cam filmi" />
+    <meta
+      property="og:description"
+      content="Bağımsız konsept landing page tasarımı. Shellson'ın resmî web sitesi değildir."
+    />
+    <meta property="og:locale" content="tr_TR" />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- İşletme adına LocalBusiness/Organization JSON-LD bilinçli olarak YOKTUR (demo modu). -->
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+
+  <body data-path="none">
+    <a class="skip-link" href="#icerik">İçeriğe geç</a>
+
+    <!-- Konsept şeridi — her ekranda görünür -->
+    <div class="concept-strip" role="note">
+      <span class="concept-strip__dot" aria-hidden="true"></span>
+      <p class="concept-strip__text"></p>
+    </div>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="#hero">
+          <span class="brand__mark" aria-hidden="true">
+            <span class="brand__layer"></span><span class="brand__layer"></span><span class="brand__layer"></span>
+          </span>
+          <span class="brand__text">
+            <strong>Shellson</strong>
+            <small>Araç &amp; bina cam filmi</small>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Ana menü">
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list">
+            <span class="nav__toggle-bars" aria-hidden="true"></span>
+            <span class="nav__toggle-label">Menü</span>
+          </button>
+          <ul class="nav__list" id="nav-list">
+            <li><a href="#yol">Hizmetler</a></li>
+            <li><a href="#ton">Ton denemesi</a></li>
+            <li><a href="#uygulamalar">Uygulamalar</a></li>
+            <li><a href="#yorumlar">Yorumlar</a></li>
+            <li><a href="#sss">SSS</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+          </ul>
+        </nav>
+
+        <a class="btn btn--ghost site-header__call" href="tel:+905550441082">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z" />
+          </svg>
+          <span>Ara</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="icerik">
+      <!-- ================= HERO ================= -->
+      <section class="hero" id="hero">
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow">
+              <span class="eyebrow__rule" aria-hidden="true"></span>
+              Kağıthane · Harmantepe
+            </p>
+
+            <h1 class="hero__title">
+              Camdan ne geçeceğine
+              <span class="hero__title-em">siz karar verin.</span>
+            </h1>
+
+            <p class="hero__lede">
+              Isı, güneş parlaması, UV ve meraklı bakışlar. Shellson aracınızın camlarına ve
+              binanızın cephesine doğru filmi seçip uyguluyor — Kağıthane’deki kendi atölyesinde.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#teklif" data-choose-path="arac">
+                Aracım için fiyat al
+              </a>
+              <a class="btn btn--outline" href="#teklif" data-choose-path="bina">
+                Binam için keşif iste
+              </a>
+            </div>
+
+            <a class="hero__quiet-link" href="#uygulamalar">
+              Önce uygulamalara bakayım
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M5 12h13M13 6l6 6-6 6" />
+              </svg>
+            </a>
+
+            <dl class="hero__facts" data-render="hero-facts"></dl>
+          </div>
+
+          <div class="hero__pane" data-film-pane="hero"></div>
+        </div>
+      </section>
+
+      <!-- ================= YOL SEÇİMİ ================= -->
+      <section class="fork" id="yol" aria-labelledby="fork-title">
+        <div class="section-head">
+          <h2 class="section-title" id="fork-title">Hangisi için buradasınız?</h2>
+          <p class="section-lede">
+            Seçiminiz sayfanın geri kalanını ayarlar: hizmetler, uygulamalar, sorular ve
+            form — hepsi size göre değişir.
+          </p>
+        </div>
+
+        <div class="fork__cards">
+          <button class="pathcard pathcard--arac" type="button" data-choose-path="arac" data-scroll="#hizmetler">
+            <span class="pathcard__label">Aracım için</span>
+            <span class="pathcard__title">Cam filmi, PPF ve kaplama</span>
+            <span class="pathcard__list">
+              Oto cam filmi · Boya koruma · Far ve kaput koruma · Komple kaplama · Renk değişimi
+            </span>
+            <span class="pathcard__cta">
+              Bu yolu seç
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M5 12h13M13 6l6 6-6 6" />
+              </svg>
+            </span>
+          </button>
+
+          <button class="pathcard pathcard--bina" type="button" data-choose-path="bina" data-scroll="#hizmetler">
+            <span class="pathcard__label">Evim / iş yerim için</span>
+            <span class="pathcard__title">Bina cam filmi</span>
+            <span class="pathcard__list">
+              Ev · Ofis · Mağaza ve vitrin · Plaza ve iş merkezi
+            </span>
+            <span class="pathcard__cta">
+              Bu yolu seç
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M5 12h13M13 6l6 6-6 6" />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= HİZMETLER ================= -->
+      <section class="services" id="hizmetler" aria-labelledby="services-title">
+        <div class="section-head">
+          <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span><span data-render="services-eyebrow"></span></p>
+          <h2 class="section-title" id="services-title" data-render="services-title"></h2>
+          <p class="section-lede" data-render="services-lede"></p>
+        </div>
+
+        <div data-render="services-body"></div>
+      </section>
+
+      <!-- ================= TON LABORATUVARI ================= -->
+      <section class="tonelab" id="ton" aria-labelledby="tonelab-title">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--center"><span class="eyebrow__rule" aria-hidden="true"></span>Ton denemesi</p>
+          <h2 class="section-title" id="tonelab-title">Ton, camdan geçen ışığın miktarıdır.</h2>
+          <p class="section-lede">
+            Kolu sürükleyin: film yüzeye serilsin. Sonra tonu değiştirip farkı görün.
+            Aynı kare üzerinde çalışır — iki farklı fotoğraf karşılaştırılmaz.
+          </p>
+        </div>
+
+        <div class="tonelab__pane" data-film-pane="lab"></div>
+
+        <p class="disclaimer">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18.1A2 2 0 0 0 3.5 21h17a2 2 0 0 0 1.7-2.9L13.7 3.9a2 2 0 0 0-3.4 0z" />
+          </svg>
+          <span>
+            Bu bir <strong>görsel benzetimdir</strong>, ölçüm değildir. Shellson’a ait doğrulanmış
+            bir ısı veya UV engelleme oranı bulunmadığı için bu sayfada hiçbir yüzde gösterilmez.
+            Gerçek sonuç seçilen filme ve cama göre değişir.
+          </span>
+        </p>
+      </section>
+
+      <!-- ================= UYGULAMALAR ================= -->
+      <section class="gallery" id="uygulamalar" aria-labelledby="gallery-title">
+        <div class="section-head">
+          <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>Uygulamalar</p>
+          <h2 class="section-title" id="gallery-title">İşin nasıl göründüğü</h2>
+          <p class="section-lede" data-render="gallery-notice"></p>
+        </div>
+
+        <div class="gallery__filters" role="group" aria-label="Galeri filtresi" data-render="gallery-filters"></div>
+        <ul class="gallery__grid" data-render="gallery-grid"></ul>
+      </section>
+
+      <!-- ================= NEDEN SHELLSON ================= -->
+      <section class="reasons" id="neden" aria-labelledby="reasons-title">
+        <div class="section-head">
+          <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>Neden Shellson</p>
+          <h2 class="section-title" id="reasons-title">Doğrulayabildiklerimiz</h2>
+          <p class="section-lede">
+            Bu listede yalnızca kamuya açık kaynaklardan teyit edilebilen maddeler var.
+            Rozet, sertifika veya yuvarlanmış istatistik yok.
+          </p>
+        </div>
+        <ul class="reasons__list" data-render="reasons"></ul>
+      </section>
+
+      <!-- ================= YORUMLAR ================= -->
+      <section class="reviews" id="yorumlar" aria-labelledby="reviews-title">
+        <div class="section-head">
+          <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>Google yorumları</p>
+          <h2 class="section-title" id="reviews-title">Müşteriler ne yazmış?</h2>
+          <p class="section-lede" data-render="reviews-lede"></p>
+        </div>
+        <div data-render="reviews-body"></div>
+      </section>
+
+      <!-- ================= TEKLİF FORMU ================= -->
+      <section class="quote" id="teklif" aria-labelledby="quote-title">
+        <div class="quote__inner">
+          <div class="section-head">
+            <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>Talep oluştur</p>
+            <h2 class="section-title" id="quote-title" data-render="quote-title"></h2>
+            <p class="section-lede" data-render="quote-lede"></p>
+          </div>
+
+          <div class="quote__switch" role="tablist" aria-label="Talep türü">
+            <button class="quote__tab" type="button" role="tab" data-choose-path="arac" id="tab-arac" aria-controls="panel-arac">
+              Aracım için
+            </button>
+            <button class="quote__tab" type="button" role="tab" data-choose-path="bina" id="tab-bina" aria-controls="panel-bina">
+              Binam için
+            </button>
+          </div>
+
+          <div data-render="quote-forms"></div>
+
+          <p class="quote__notice" data-render="form-notice"></p>
+        </div>
+      </section>
+
+      <!-- ================= SSS ================= -->
+      <section class="faq" id="sss" aria-labelledby="faq-title">
+        <div class="section-head">
+          <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>Sık sorulanlar</p>
+          <h2 class="section-title" id="faq-title">Sorulardan geçelim</h2>
+        </div>
+        <div data-render="faq"></div>
+      </section>
+
+      <!-- ================= İLETİŞİM ================= -->
+      <section class="contact" id="iletisim" aria-labelledby="contact-title">
+        <div class="section-head">
+          <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span>İletişim</p>
+          <h2 class="section-title" id="contact-title">Kağıthane’de neredeyiz?</h2>
+        </div>
+        <div class="contact__grid" data-render="contact"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__concept" data-render="footer-concept"></p>
+        <div class="site-footer__meta" data-render="footer-meta"></div>
+      </div>
+    </footer>
+
+    <!-- Mobil yapışkan CTA -->
+    <div class="dock" data-render="dock" hidden></div>
+
+    <!-- Lightbox -->
+    <dialog class="lightbox" id="lightbox" aria-label="Görsel önizleme">
+      <button class="lightbox__close" type="button" aria-label="Kapat">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+      <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Önceki görsel">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6" /></svg>
+      </button>
+      <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Sonraki görsel">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6" /></svg>
+      </button>
+      <figure class="lightbox__figure">
+        <img class="lightbox__img" alt="" />
+        <figcaption class="lightbox__caption"></figcaption>
+      </figure>
+    </dialog>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

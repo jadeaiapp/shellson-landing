@@ -1,0 +1,353 @@
+{
+  "sahne-arac-ic": {
+    "slug": "sahne-arac-ic",
+    "group": "scene",
+    "alt": "Bir aracın içinden ön camdan dışarı bakış",
+    "width": 1800,
+    "height": 2400,
+    "ratio": 1.3333,
+    "sizes": [
+      {
+        "w": 480,
+        "h": 640
+      },
+      {
+        "w": 960,
+        "h": 1280
+      },
+      {
+        "w": 1600,
+        "h": 2133
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAACQBACdASoUABsAPwlos0+rpaUiMBgMAXAhCWUAACkEf5x5G+fh6yupkQcaAgAA/p7LPzK1lXbcDBGaliwMe6xH6+vjLzgf1Bkdwxu5MPN5PB2B2IzZIew7dLPEyDufAAA=",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/9257577/",
+    "photographer": null,
+    "license": "Pexels License"
+  },
+  "sahne-salon": {
+    "slug": "sahne-salon",
+    "group": "scene",
+    "alt": "Geniş pencereden bol gün ışığı alan aydınlık bir oturma odası",
+    "width": 1800,
+    "height": 1770,
+    "ratio": 0.9833,
+    "sizes": [
+      {
+        "w": 480,
+        "h": 472
+      },
+      {
+        "w": 960,
+        "h": 944
+      },
+      {
+        "w": 1600,
+        "h": 1573
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABQBACdASoUABQAPwlqrk+rpaQiMBgMAXAhCWkAACnG2bWMTd5G0GoXEX0AAM1FVAxTRvUFmwOUg3wavPP807A1zET00dRC81PcGWpnXZIGSAAA",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/29012619/",
+    "photographer": null,
+    "license": "Pexels License"
+  },
+  "oto-film-serme": {
+    "slug": "oto-film-serme",
+    "group": "oto",
+    "alt": "Bir araç kaputunun üzerine geniş şeffaf koruma filmi seriliyor",
+    "width": 1800,
+    "height": 1201,
+    "ratio": 0.6672,
+    "sizes": [
+      {
+        "w": 480,
+        "h": 320
+      },
+      {
+        "w": 960,
+        "h": 641
+      },
+      {
+        "w": 1600,
+        "h": 1068
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAwCdASoUAA0APwlwr1ArpqQisAgBcCEJYwDImBujrfAxL3l+AAD+42Y3wFNYtfmV77uINbaLW4WRzBFMvWyBUKxYeETUcJD7rN8AAAA=",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/10126661/",
+    "photographer": null,
+    "license": "Pexels License"
+  },
+  "oto-rakle": {
+    "slug": "oto-rakle",
+    "group": "oto",
+    "alt": "Eldivenli eller, araç panel kenarında filmi rakleyle yüzeye yediriyor",
+    "width": 1800,
+    "height": 1201,
+    "ratio": 0.6672,
+    "sizes": [
+      {
+        "w": 480,
+        "h": 320
+      },
+      {
+        "w": 960,
+        "h": 641
+      },
+      {
+        "w": 1600,
+        "h": 1068
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACwAwCdASoUAA0APwlwsVArpiSisAgBcCEJZwAAXeSh8lr9CJh64AD8jwN4hAztnrsI+HbiQ1wjIwQHz74a4V6v4mZTIYAA",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/10126663/",
+    "photographer": null,
+    "license": "Pexels License"
+  },
+  "oto-film-yayma": {
+    "slug": "oto-film-yayma",
+    "group": "oto",
+    "alt": "Bir araç yüzeyine yayılan filmin elle düzeltilmesi",
+    "width": 1800,
+    "height": 1200,
+    "ratio": 0.6667,
+    "sizes": [
+      {
+        "w": 480,
+        "h": 320
+      },
+      {
+        "w": 960,
+        "h": 640
+      },
+      {
+        "w": 1600,
+        "h": 1067
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAACwAwCdASoUAA0APwlwsVArpiSisAgBcCEJaQAAUrXvnLSSnjrSoAD+y/Xd118f8F+oKyWHErjSMnMmmUAQAA==",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/6025950/",
+    "photographer": null,
+    "license": "Pexels License"
+  },
+  "oto-kapi-cami": {
+    "slug": "oto-kapi-cami",
+    "group": "oto",
+    "alt": "Bir aracın yan kapı camı ve dikiz aynası yakın plan",
+    "width": 1800,
+    "height": 3198,
+    "ratio": 1.7767,
+    "sizes": [
+      {
+        "w": 480,
+        "h": 853
+      },
+      {
+        "w": 960,
+        "h": 1706
+      },
+      {
+        "w": 1600,
+        "h": 2843
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwBACdASoUACMAPvloqU+qpiyjMA1RkB8JZwDPoCHcsebO7LY1hZiMcmhPC3QAAP6MMhUBaQsW7m0HRsMgP+gCuoBqqv1+P1t49s8d+M1KYFsqKeSn0KhcLKO3bJvjlDbXAAAA",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/21912674/",
+    "photographer": null,
+    "license": "Pexels License"
+  },
+  "oto-atolye": {
+    "slug": "oto-atolye",
+    "group": "oto",
+    "alt": "Atölye ortamında hazırlık aşamasındaki bir otomobil",
+    "width": 1800,
+    "height": 1200,
+    "ratio": 0.6667,
+    "sizes": [
+      {
+        "w": 480,
+        "h": 320
+      },
+      {
+        "w": 960,
+        "h": 640
+      },
+      {
+        "w": 1600,
+        "h": 1067
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAwCdASoUAA0APwlurk+rpiQiMAgBcCEJZwDCgCHYRQWdYcESY51gAP7jDN98Q6ARY3z+Wlk0gurhQ5Ky7/LWhAA=",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/6873098/",
+    "photographer": null,
+    "license": "Pexels License"
+  },
+  "oto-cam-manzara": {
+    "slug": "oto-cam-manzara",
+    "group": "oto",
+    "alt": "Açık araç kapısının camından dışarıdaki manzaraya bakış",
+    "width": 1800,
+    "height": 1200,
+    "ratio": 0.6667,
+    "sizes": [
+      {
+        "w": 480,
+        "h": 320
+      },
+      {
+        "w": 960,
+        "h": 640
+      },
+      {
+        "w": 1600,
+        "h": 1067
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAwCdASoUAA0APwlur0+rpiQiMAgBcCEJZQDA3BuyY/5Mm4J3/9QAAPyred3voioqbEvDUV+h2Gx/RZBidtRWYWKvLjbA9xVqbqHWgAA=",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/16052482/",
+    "photographer": null,
+    "license": "Pexels License"
+  },
+  "bina-jaluzi": {
+    "slug": "bina-jaluzi",
+    "group": "bina",
+    "alt": "Sade bir odada jaluzili pencere ve pencere önü",
+    "width": 1800,
+    "height": 1202,
+    "ratio": 0.6678,
+    "sizes": [
+      {
+        "w": 480,
+        "h": 321
+      },
+      {
+        "w": 960,
+        "h": 641
+      },
+      {
+        "w": 1600,
+        "h": 1068
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAACwAwCdASoUAA0APwlur0+rpiQiMAgBcCEJaQAASoioAZT0111IAAD+79RgTctWoId84t650aPV1s2HkAA=",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/13005096/",
+    "photographer": null,
+    "license": "Pexels License"
+  },
+  "bina-cephe-cizgi": {
+    "slug": "bina-cephe-cizgi",
+    "group": "bina",
+    "alt": "İnce çizgili cam giydirme cephenin yakın planı",
+    "width": 1800,
+    "height": 2250,
+    "ratio": 1.25,
+    "sizes": [
+      {
+        "w": 480,
+        "h": 600
+      },
+      {
+        "w": 960,
+        "h": 1200
+      },
+      {
+        "w": 1600,
+        "h": 2000
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQAwCdASoUABkAPwl2s1MrpySiqAqpcCEJZQC7AAilXBEtYl4AAP5wBHNE6eAxtlckXDIyL1P7FgqhGW01zlVH3YAVngpfvR4vtMEIhFm4AA==",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/16566147/",
+    "photographer": null,
+    "license": "Pexels License"
+  },
+  "bina-kavisli": {
+    "slug": "bina-kavisli",
+    "group": "bina",
+    "alt": "Kavisli cam cepheye sahip modern bir bina",
+    "width": 1800,
+    "height": 2700,
+    "ratio": 1.5,
+    "sizes": [
+      {
+        "w": 480,
+        "h": 720
+      },
+      {
+        "w": 960,
+        "h": 1440
+      },
+      {
+        "w": 1600,
+        "h": 2400
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwBACdASoUAB4APwlork+rpaQiN/VYAXAhCWcAyFwQh4lwoDZH/2+zDeAA/ucfmZa8txLOpDdToiUx1jp7hS7sgC3f1yPrADa0hXsi4AAAAA==",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/34362345/",
+    "photographer": null,
+    "license": "Pexels License"
+  },
+  "bina-grid": {
+    "slug": "bina-grid",
+    "group": "bina",
+    "alt": "Modern bir binanın ızgara desenli cam cephesi",
+    "width": 1800,
+    "height": 1200,
+    "ratio": 0.6667,
+    "sizes": [
+      {
+        "w": 480,
+        "h": 320
+      },
+      {
+        "w": 960,
+        "h": 640
+      },
+      {
+        "w": 1600,
+        "h": 1067
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAADwAgCdASoUAA0APwlwr1ArpqQisAgBcCEJYwCdAAe0MAD3BG6ZamFbDmvFN0WLhkMQ2jVHYt1MuXDbFw2gAA==",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/26707879/",
+    "photographer": null,
+    "license": "Pexels License"
+  },
+  "bina-ofis-aksam": {
+    "slug": "bina-ofis-aksam",
+    "group": "bina",
+    "alt": "Akşam saatinde camlarından ışık sızan ofis binası",
+    "width": 1800,
+    "height": 1200,
+    "ratio": 0.6667,
+    "sizes": [
+      {
+        "w": 480,
+        "h": 320
+      },
+      {
+        "w": 960,
+        "h": 640
+      },
+      {
+        "w": 1600,
+        "h": 1067
+      }
+    ],
+    "lqip": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAACwAwCdASoUAA0APwlwr1ArpqQisAgBcCEJZwAAW+yyU4L3FA2+jAD+8MsebCYHCRsqjL10a0cAAA==",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/35188667/",
+    "photographer": null,
+    "license": "Pexels License"
+  }
+}

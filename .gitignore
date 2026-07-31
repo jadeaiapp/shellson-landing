@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.cache/
+*.log
+.DS_Store
+Thumbs.db
+.vite/
+
+# Ham ekran görüntüleri çok büyük; depoya WebP kopyaları giriyor
+screenshots/*.png
+

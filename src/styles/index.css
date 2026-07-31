@@ -1,0 +1,5 @@
+/* Sıra önemli: font tanımları → token'lar → temel → bileşenler */
+@import './fonts.css';
+@import './tokens.css';
+@import './base.css';
+@import './components.css';
