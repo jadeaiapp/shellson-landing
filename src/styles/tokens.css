@@ -1,0 +1,153 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   SHELLSON — TASARIM TOKENLARI
+   Palet WCAG kontrast hesabıyla kalibre edildi; oranlar yorumlarda.
+   Tasarım yönü: "kontrol altındaki ışık" — cam kenarı mürekkebi, gün ışığı
+   yüzeyi, filmin serildiği an.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@font-face {
+  font-family: 'Bricolage';
+  src: url('../fonts/bricolage-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bricolage';
+  src: url('../fonts/bricolage-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Instrument';
+  src: url('../fonts/instrument-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Instrument';
+  src: url('../fonts/instrument-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DMMono';
+  src: url('../fonts/dmmono-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ── Yüzeyler ─────────────────────────────────────────────────────────── */
+  --daylight: #eff1ee;          /* sayfa zemini — soğuk nötr, yeşil fısıltılı */
+  --paper: #fafbf9;             /* kart yüzeyi */
+  --mist: #d5dcd9;              /* dekoratif ince çizgi */
+  --mist-strong: #b9c4c0;       /* görünür kenarlık */
+  --ink: #0b2830;               /* cam kenarı mürekkebi — koyu bölümler */
+  --ink-2: #12414a;             /* ikincil metin (9.83:1) */
+  --ink-raise: #12333c;         /* koyu bölümde yükseltilmiş yüzey */
+  --slate: #4a6168;             /* yardımcı metin (5.78:1) */
+  --muted-on-ink: #9db4b9;      /* koyu üzerinde ikincil metin (7.10:1) */
+
+  /* ── Yol vurguları ────────────────────────────────────────────────────── */
+  /* Araç: derin teal — camın kenarından bakınca göründüğü renk */
+  --tint: #0d7f7a;              /* UI/büyük metin (4.27:1 — küçük metin YOK) */
+  --tint-deep: #065f5b;         /* metin ve buton dolgusu (6.61:1) */
+  --tint-light: #3ed3c9;        /* koyu zemin üzerinde (8.35:1) */
+  --tint-wash: #e2f0ee;         /* çok açık zemin */
+
+  /* Yapı: indigo — mimari camın gölge tarafı */
+  --azure: #3f51c4;             /* UI/metin (5.80:1) */
+  --azure-deep: #2e3d9e;        /* buton dolgusu (8.12:1) */
+  --azure-light: #93a3f5;       /* koyu zemin üzerinde (6.47:1) */
+  --azure-wash: #e7e9fa;
+
+  /* Işık — dekoratif, asla marka dolgusu değil */
+  --flare: #fff4d6;
+  --flare-hot: #fffaee;
+
+  --danger: #b3261e;
+
+  /* ── Aktif yol (JS ile <html data-path> üzerinden değişir) ────────────── */
+  --accent: var(--tint);
+  --accent-deep: var(--tint-deep);
+  --accent-light: var(--tint-light);
+  --accent-wash: var(--tint-wash);
+
+  /* ── Tipografi ────────────────────────────────────────────────────────── */
+  --font-display: 'Bricolage', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Instrument', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'DMMono', ui-monospace, 'Cascadia Mono', monospace;
+
+  /* 1.24 oranlı ölçek, mobilde clamp ile daralır */
+  --t-mega: clamp(2.6rem, 8.5vw, 5.4rem);
+  --t-h1: clamp(2.1rem, 6vw, 3.6rem);
+  --t-h2: clamp(1.7rem, 4vw, 2.6rem);
+  --t-h3: clamp(1.25rem, 2.4vw, 1.6rem);
+  --t-lede: clamp(1.05rem, 1.7vw, 1.28rem);
+  --t-body: 1.0625rem;   /* 17px */
+  --t-small: 0.9375rem;  /* 15px */
+  --t-label: 0.75rem;    /* 12px — yalnız mono etiketler */
+
+  /* ── Ritim (4/8 tabanlı) ──────────────────────────────────────────────── */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+  --s-9: 96px;
+  --s-10: 128px;
+
+  --section-y: clamp(64px, 9vw, 120px);
+  --gutter: clamp(20px, 5vw, 48px);
+  --measure: 1180px;
+  --measure-text: 62ch;
+
+  /* ── Yüzey detayı ─────────────────────────────────────────────────────── */
+  --r-sm: 4px;
+  --r-md: 10px;
+  --r-lg: 18px;
+  --r-pill: 999px;
+
+  --shadow-1: 0 1px 2px rgba(11, 40, 48, 0.06), 0 2px 8px rgba(11, 40, 48, 0.04);
+  --shadow-2: 0 2px 6px rgba(11, 40, 48, 0.07), 0 12px 32px rgba(11, 40, 48, 0.08);
+  --shadow-3: 0 8px 20px rgba(11, 40, 48, 0.1), 0 32px 64px rgba(11, 40, 48, 0.14);
+
+  /* ── Hareket: "çekpas" eğrisi ─────────────────────────────────────────── */
+  --ease-squeegee: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --d-fast: 160ms;
+  --d-mid: 260ms;
+  --d-slow: 420ms;
+
+  /* ── Katmanlar ────────────────────────────────────────────────────────── */
+  --z-base: 0;
+  --z-raise: 10;
+  --z-sticky: 40;
+  --z-header: 60;
+  --z-overlay: 100;
+  --z-modal: 120;
+}
+
+/* Aktif yol değişimi — tek yerden tüm vurgu renkleri */
+:root[data-path='yapi'] {
+  --accent: var(--azure);
+  --accent-deep: var(--azure-deep);
+  --accent-light: var(--azure-light);
+  --accent-wash: var(--azure-wash);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --d-fast: 1ms;
+    --d-mid: 1ms;
+    --d-slow: 1ms;
+  }
+}

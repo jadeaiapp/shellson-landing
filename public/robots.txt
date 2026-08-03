@@ -1,0 +1,7 @@
+# Shellson — BAĞIMSIZ KONSEPT ÇALIŞMA
+# Bu site Shellson'ın resmî web sitesi değildir.
+# İşletmenin arama sonuçlarıyla karışmaması için indeksleme tamamen kapalıdır.
+# Resmî yayına geçilirken bu dosya README'deki adımlara göre değiştirilmelidir.
+
+User-agent: *
+Disallow: /
